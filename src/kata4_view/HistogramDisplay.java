@@ -1,6 +1,7 @@
-package kata4;
+package kata4_view;
 import java.awt.*;
 import javax.swing.JPanel;
+import kata4_model.Histogram;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -48,9 +49,6 @@ public class HistogramDisplay extends ApplicationFrame{
         
         }
         
-        /*dataSet.addValue(300,"","ulpgc.es");
-        dataSet.addValue(400,"","dis.ulpgc.es");
-        dataSet.addValue(200,"","gmail.com");*/
         return dataSet;
     }
     

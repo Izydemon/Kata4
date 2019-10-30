@@ -1,23 +1,18 @@
 package kata4;
 
+import java.util.List;
+import kata4_model.*;
+import kata4_view.*;
+
 public class Main {
 
-   
     public static void main(String[] args) {
-        
-      Histogram<String> histogram = new Histogram();
+      String fileName = new String("email.txt");
+      /* I */ List<Mail> mailList = MailListReader.read(fileName);
+      /* P */ Histogram histogram = MailHistogramBuilder.build(mailList);
       
-      histogram.increment("dis.ulpgc.es");
-      histogram.increment("gmail.com");
-      histogram.increment("hotmail.com");
-      histogram.increment("ulpgc.es");
-      histogram.increment("dis.ulpgc.es");
-      histogram.increment("gmail.com");
-      histogram.increment("hotmail.com");
-      histogram.increment("dis.ulpgc.es");
-      
-      HistogramDisplay histo = new HistogramDisplay(histogram);
-      histo.execute();
+      /* O */ HistogramDisplay histogramDisplay = new HistogramDisplay(histogram);
+      /* O */ histogramDisplay.execute();
     }
     
 }
