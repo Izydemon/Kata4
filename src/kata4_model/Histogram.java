@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+
 public class Histogram <T>{
     private final Map<T, Integer> map = (Map<T, Integer>) new HashMap<T,Integer>();
     
